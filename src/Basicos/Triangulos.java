@@ -33,15 +33,26 @@ public class Triangulos {
             }
         }
         //Mostrar la matriz
+        int sumSup=0, sumInf=0;
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
              System.out.print(m[i][j]+"    ");
+             if(i<j)
+                 sumSup=sumSup+m[i][j];
+             if(i>j)
+                 sumInf=sumInf+m[i][j];
             }
             System.out.println();
         }
-        
-        
-        
-    
+        System.out.println("Triángulo Superior="+sumSup);
+        System.out.println("Triángulo Inferior="+sumInf);
+        if(sumSup>sumInf)
+            System.out.println("S");
+        else
+            if(sumSup<sumInf)
+                System.out.println("I");
+            else
+                System.out.println("N");
+
     }
 }
