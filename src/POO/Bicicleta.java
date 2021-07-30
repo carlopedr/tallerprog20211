@@ -2,14 +2,20 @@
 package POO;
 
 public class Bicicleta {
-    private int velocidadActual;
-    private int platoActual;
-    private int pinonActual;
-
+    protected int velocidadActual;
+    protected int platoActual;
+    protected int pinonActual;
+    public static int numeroRuedas = 2;
+    
     public Bicicleta(int velocidadActual, int platoActual, int pinonActual) {
         this.velocidadActual = velocidadActual;
         this.platoActual = platoActual;
         this.pinonActual = pinonActual;
+    }
+    public Bicicleta() {
+        this.velocidadActual = 0;
+        this.platoActual = 1;
+        this.pinonActual = 1;
     }
     //Métodos get y set para acceder al valor del atributo y 
     //cambiar el valor del atributo
@@ -38,10 +44,15 @@ public class Bicicleta {
     public void setPinonActual(int pinonActual) {
         this.pinonActual = pinonActual;
     }
-    
-    
-    
-    
+
+    public static int getNumeroRuedas() {
+        return numeroRuedas;
+    }
+
+    public static void setNumeroRuedas(int numeroRuedas) {
+        Bicicleta.numeroRuedas = numeroRuedas;
+    }
+        
     void acelerar(){
         //velocidadActual=velocidadActual*2;
         velocidadActual*=2;
@@ -50,17 +61,27 @@ public class Bicicleta {
         //velocidadActual=velocidadActual/2;
         velocidadActual/=2;
     }
-    void cambiarPlato(int plato){
-        platoActual=plato;
+    void cambiarPlato(int plato) {
+        platoActual = plato;
     }
-    void cambiarPinon(int pinon){
-        pinonActual=pinon;
+
+    void cambiarPlato() {
+        platoActual = 1;
+    }
+
+    void cambiarPinon(int pinon) {
+        pinonActual = pinon;
+    }
+
+    void cambiarPinon() {
+        pinonActual = 1;
     }
 
     @Override
     public String toString() {
         return "Bicicleta{" + "velocidadActual=" + velocidadActual + ", platoActual=" + platoActual + ", pinonActual=" + pinonActual + '}';
     }
+    
     
     
 }
