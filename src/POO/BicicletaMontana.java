@@ -21,7 +21,7 @@ public class BicicletaMontana extends Bicicleta{
         this.suspension=suspension;
     }
 
-    void acelerar(){
+    public void acelerar(){
         //velocidadActual=velocidadActual*2;
         velocidadActual*=3;
     }

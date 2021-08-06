@@ -1,19 +1,19 @@
 
 package POO;
 
-public class Bicicleta {
-    protected int velocidadActual;
+public class Bicicleta extends Vehiculo implements Imprimible {
     protected int platoActual;
     protected int pinonActual;
     public static int numeroRuedas = 2;
     
     public Bicicleta(int velocidadActual, int platoActual, int pinonActual) {
-        this.velocidadActual = velocidadActual;
+        super(velocidadActual);
+        //this.velocidadActual = velocidadActual;
         this.platoActual = platoActual;
         this.pinonActual = pinonActual;
     }
     public Bicicleta() {
-        this.velocidadActual = 0;
+        super(0);
         this.platoActual = 1;
         this.pinonActual = 1;
     }
@@ -53,11 +53,11 @@ public class Bicicleta {
         Bicicleta.numeroRuedas = numeroRuedas;
     }
         
-    void acelerar(){
+    public void acelerar(){
         //velocidadActual=velocidadActual*2;
         velocidadActual*=2;
     }
-    void frenar(){
+    public void frenar(){
         //velocidadActual=velocidadActual/2;
         velocidadActual/=2;
     }
@@ -80,6 +80,14 @@ public class Bicicleta {
     @Override
     public String toString() {
         return "Bicicleta{" + "velocidadActual=" + velocidadActual + ", platoActual=" + platoActual + ", pinonActual=" + pinonActual + '}';
+    }
+
+    @Override
+    public void imprimir() {
+        System.out.println("Vel. Actual :"+velocidadActual);
+        System.out.println("Plato Actual:"+platoActual);
+        System.out.println("Plato Actual:"+pinonActual);
+  
     }
     
     

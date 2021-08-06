@@ -53,5 +53,9 @@ public class Test {
         miBT.acelerar();
         System.out.println("Tandem Acelerada");
         System.out.println(miBT.toString());
+        System.out.println("Interfaz");
+        Bicicleta miBici1 = new Bicicleta(30,54,12);
+        miBici1.imprimir();
+        
     }
 }

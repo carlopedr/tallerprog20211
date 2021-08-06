@@ -10,14 +10,14 @@ package POO;
  * @author Usuario
  */
 public class BicicletaTandem extends Bicicleta{
-    private int numAsientos;
+    private final int numAsientos;
 
-    public BicicletaTandem(int numAsientos, int velocidadActual, int platoActual, int pinonActual) {
+    public BicicletaTandem(int velocidadActual, int platoActual, int pinonActual, int numAsientos) {
         super(velocidadActual, platoActual, pinonActual);
         this.numAsientos = numAsientos;
     }
 
-    void acelerar(){
+    public void acelerar(){
         //velocidadActual=velocidadActual*2;
         velocidadActual*=4;
     }
