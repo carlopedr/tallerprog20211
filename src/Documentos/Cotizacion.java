@@ -12,11 +12,16 @@ import java.util.Date;
  * @author Usuario
  */
 public class Cotizacion extends Documento{
+    private final int cantidad;
+    private final float descuento;
 
-    public Cotizacion(int id, Date fecha) {
+    public Cotizacion(int cantidad, float descuento, int id, Date fecha) {
         super(id, fecha);
+        this.cantidad = cantidad;
+        this.descuento = descuento;
     }
-
+    
+    
     @Override
     public void imprimir() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
