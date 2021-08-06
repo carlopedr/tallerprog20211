@@ -12,10 +12,17 @@ import java.util.Date;
  * @author Usuario
  */
 public class Cotizacion extends Documento{
+    
+    private int cantidad;
+    private float descuento;
 
-    public Cotizacion(int id, Date fecha) {
+    public Cotizacion(int cantidad, float descuento, int id, Date fecha) {
         super(id, fecha);
+        this.cantidad = cantidad;
+        this.descuento = descuento;
     }
+    
+    
 
     @Override
     public void imprimir() {

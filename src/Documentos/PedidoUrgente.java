@@ -5,10 +5,16 @@
  */
 package Documentos;
 
+import java.util.Date;
+
 /**
  *
  * @author Usuario
  */
-public class PedidoUrgente {
+public class PedidoUrgente extends Pedido{
+    
+    public PedidoUrgente(int id, Date fecha) {
+        super(id, fecha);
+    }
     
 }

@@ -75,6 +75,5 @@ public class Factura extends Documento{
     public String toString() {
         return "Factura{" + "cliente=" + cliente.toString() + ", producto=" + producto.toString() + ", cantidad=" + cantidad + '}';
     }
-    
-    
+       
 }

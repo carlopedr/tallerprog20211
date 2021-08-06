@@ -39,6 +39,4 @@ public class Producto {
         return "Producto{" + "codigo=" + codigo + ", nombre=" + nombre + '}';
     }
     
-    
-
 }

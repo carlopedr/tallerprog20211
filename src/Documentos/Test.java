@@ -17,6 +17,7 @@ public class Test {
     public static void main(String[] args) throws ParseException {
         SimpleDateFormat objSDF = new SimpleDateFormat("dd-mm-yyyy");
         Date fecha;
+        
         fecha = objSDF.parse("07-08-2021");
         Persona c1 = new Persona(1, "Pedro", "pp@gmail.com");
         Producto p1 = new Producto(100, "Mouse BT");

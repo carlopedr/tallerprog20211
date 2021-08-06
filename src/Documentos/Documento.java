@@ -42,7 +42,5 @@ public abstract class Documento {
     public String toString() {
         return "Documento{" + "id=" + id + ", fecha=" + fecha + '}';
     }
-    
-    
-    
+           
 }
